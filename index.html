@@ -62,7 +62,7 @@
         /* Sidebar */
         .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; }
         .sidebar-overlay.open { display: block; }
-        .sidebar { position: fixed; top: 0; right: -280px; width: 280px; height: 100%; background: var(--cream); z-index: 201; transition: right .3s ease; padding: 32px 28px; box-shadow: -4px 0 20px rgba(0,0,0,0.12); display: flex; flex-direction: column; gap: 8px; }
+        .sidebar { position: fixed; top: 0; right: -320px; width: 280px; height: 100%; background: var(--cream); z-index: 201; transition: right .3s ease; padding: 32px 28px; box-shadow: -4px 0 20px rgba(0,0,0,0.12); display: flex; flex-direction: column; gap: 8px; overflow-y: auto; }
         .sidebar.open { right: 0; }
         .sidebar-close { align-self: flex-end; background: none; border: none; cursor: pointer; font-size: 1.4rem; color: var(--warm-dark); margin-bottom: 16px; line-height: 1; }
         .sidebar-logo { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); margin-bottom: 24px; }
@@ -193,12 +193,12 @@
         .footer-bottom { border-top: 1px solid rgba(253,250,245,.1); padding-top: 28px; text-align: center; font-size: .82rem; color: rgba(253,250,245,.5); max-width: var(--max-w); margin: 0 auto; }
 
         /* ===== MOBILE CTA ===== */
-        .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--warm-dark); z-index: 98; margin: 0; width: 100%; }
-        .mobile-cta-grid { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
-        .mobile-cta-btn { padding: 16px; text-align: center; color: var(--cream); text-decoration: none; font-weight: 600; font-size: .88rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: inherit; background: transparent; width: 100%; }
+        .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--warm-dark); z-index: 98; width: 100vw; }
+        .mobile-cta-grid { display: flex; width: 100%; }
+        .mobile-cta-btn { flex: 1; min-width: 0; padding: 16px 8px; text-align: center; color: var(--cream); text-decoration: none; font-weight: 600; font-size: .88rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: inherit; background: transparent; white-space: nowrap; }
         .mobile-cta-btn:first-child { background: rgba(176,141,87,.25); border-right: 1px solid rgba(253,250,245,.1); }
         .mobile-cta-btn:last-child { background: var(--sage-green); }
-        .mobile-cta-btn svg { width: 16px; height: 16px; fill: currentColor; }
+        .mobile-cta-btn svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
 
         /* ===== RESPONSIVE ===== */
         @media(max-width:960px){
@@ -324,7 +324,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
     <div class="hero-image-side">
-        <img src="images/hero-section.jpg" alt="New Smile Dental clinic interior">
+        <img src="public/images/hero-section.jpg" alt="New Smile Dental clinic interior">
     </div>
     <div class="hero-content-side">
         <div class="hero-badge"><svg width="14" height="14" style="fill:currentColor"><use href="#ic-check"/></svg> Now Accepting CDCP</div>
@@ -438,7 +438,7 @@
         <div class="doctors-grid">
             <div class="doctor-card">
                 <div class="doctor-image">
-                    <img src="images/dr-brian-jang.jpg" alt="Dr. Brian Jung">
+                    <img src="public/images/dr-brian-jang.jpg" alt="Dr. Brian Jung">
                 </div>
                 <div class="doctor-info">
                     <div class="doctor-name">Dr. Brian Jung</div>
@@ -448,7 +448,7 @@
             </div>
             <div class="doctor-card">
                 <div class="doctor-image">
-                    <img src="images/dr-jeongyeo-park.jpg" alt="Dr. Jeongyeo Park">
+                    <img src="public/images/dr-jeongyeo-park.jpg" alt="Dr. Jeongyeo Park">
                 </div>
                 <div class="doctor-info">
                     <div class="doctor-name">Dr. Jeongyeo Park</div>
@@ -486,7 +486,7 @@
 <section class="location" id="contact">
     <div class="location-inner">
         <div class="location-map">
-            <img src="images/location-map.jpg" alt="New Smile Dental location map">
+            <img src="public/images/location-map.jpg" alt="New Smile Dental location map">
         </div>
         <div class="location-info">
             <h2>Visit Us Today</h2>
