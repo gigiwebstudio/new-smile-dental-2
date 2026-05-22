@@ -74,8 +74,14 @@
         .sidebar .sidebar-cta { margin-top: 20px; background: var(--sage-green); color: var(--cream); text-align: center; padding: 14px; border-bottom: none; }
         .sidebar .sidebar-cta:hover { background: #5a8867; color: var(--cream); }
 
-        /* ===== HERO ===== */
-        .hero { min-height: 640px; display: flex; align-items: stretch; overflow: hidden; }
+        /* ===== EXPLICIT DESKTOP DEFAULTS ===== */
+        .hero { min-height: 640px; display: flex; flex-direction: row; align-items: stretch; overflow: hidden; }
+        .location-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; max-width: var(--max-w); margin: 0 auto 40px; }
+        .about-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid rgba(0,0,0,.08); }
+        .reviews-slider { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 36px; }
+        .doctors-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 36px; }
         .hero-image-side { flex: 1; overflow: hidden; }
         .hero-image-side img { width: 100%; height: 100%; object-fit: cover; display: block; animation: zoomIn 1s ease-out; }
         @keyframes zoomIn { from { transform: scale(1.05); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -98,7 +104,6 @@
         .about-heading { text-align: center; max-width: 640px; margin: 0 auto 56px; }
         .about-heading h2 { margin-bottom: 16px; }
         .about-heading p { color: var(--warm-gray); }
-        .about-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
         .about-card { background: var(--cream); padding: 40px 36px; border-top: 4px solid var(--sage-green); text-align: center; }
         .about-card-icon { width: 60px; height: 60px; background: rgba(107,158,120,.1); border-radius: 50%; color: var(--sage-green); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
         .about-card-icon svg { width: 26px; height: 26px; fill: currentColor; }
@@ -108,7 +113,6 @@
         /* ===== SERVICES ===== */
         .services { background: var(--cream); padding: 100px 40px; }
         .section-heading { text-align: center; margin-bottom: 56px; }
-        .services-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid rgba(0,0,0,.08); }
         .service-card { background: var(--sand); padding: 44px 40px; border-right: 1px solid rgba(0,0,0,.08); transition: all .4s; }
         .service-card:last-child { border-right: none; }
         .service-card:hover { background: var(--gold); }
@@ -127,7 +131,6 @@
         /* ===== REVIEWS ===== */
         .reviews { background: var(--sand); padding: 100px 40px; }
         .reviews-heading { text-align: center; margin-bottom: 56px; }
-        .reviews-slider { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 36px; }
         .review-card { background: var(--cream); padding: 36px 32px; border-left: 4px solid var(--gold); }
         .review-stars { color: var(--gold); display: flex; gap: 3px; margin-bottom: 12px; }
         .review-stars svg { width: 14px; height: 14px; fill: currentColor; }
@@ -142,7 +145,6 @@
         /* ===== DOCTORS ===== */
         .doctors { background: var(--cream); padding: 100px 40px; }
         .doctors-heading { text-align: center; margin-bottom: 56px; }
-        .doctors-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 36px; }
         .doctor-card { background: var(--sand); overflow: hidden; }
         .doctor-image { width: 100%; height: 260px; overflow: hidden; background: linear-gradient(135deg,#D4A574,#C99A64); display: flex; align-items: center; justify-content: center; }
         .doctor-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
@@ -164,7 +166,6 @@
 
         /* ===== LOCATION ===== */
         .location { padding: 100px 40px; background: var(--sand); }
-        .location-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
         .location-map { overflow: hidden; min-height: 420px; }
         .location-map img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 420px; }
         .location-info h2 { color: var(--warm-dark); margin-bottom: 20px; }
@@ -180,7 +181,6 @@
 
         /* ===== FOOTER ===== */
         footer { background: var(--warm-dark); color: var(--cream); padding: 72px 40px 32px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; max-width: var(--max-w); margin: 0 auto 40px; }
         .footer-column h4 { font-size: .82rem; font-weight: 700; margin-bottom: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: .05em; }
         .footer-column p, .footer-column a, .footer-column li { font-size: .88rem; color: rgba(253,250,245,.72); line-height: 1.8; text-decoration: none; }
         .footer-column a:hover { color: var(--gold); }
