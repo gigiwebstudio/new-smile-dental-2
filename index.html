@@ -211,8 +211,31 @@
             .footer-grid{grid-template-columns:repeat(2,1fr);}
         }
         @media(max-width:768px){
+            /* top bar */
             .top-bar { padding: 9px 16px; }
             .top-bar-left { display: none; }
+            .top-bar-inner { justify-content: space-between; }
+            .top-bar-right { justify-content: space-between; width: 100%; }
+            /* nav */
+            nav { padding: 14px 16px; top: 36px; }
+            .nav-links, .nav-cta { display: none; }
+            .hamburger { display: flex; }
+            /* hero */
+            .hero { flex-direction: column; }
+            .hero-image-side { min-height: 280px; max-height: 320px; }
+            .hero-content-side { padding: 48px 24px; }
+            /* sections */
+            .about,.services,.reviews,.doctors,.cdcp{ padding: 64px 20px; }
+            .location { padding: 64px 20px; }
+            .location-inner { grid-template-columns: 1fr; gap: 36px; }
+            .location-map { min-height: 260px; }
+            .location-map img { min-height: 260px; }
+            /* footer */
+            .footer-grid { grid-template-columns: 1fr; }
+            footer { padding: 48px 20px 24px; }
+            /* mobile cta */
+            .mobile-cta { display: block; }
+            body { padding-bottom: 56px; }
         }
             /* nav */
             nav { padding: 14px 16px; top: 36px; }
