@@ -11,7 +11,8 @@ new-smile-dental/
 └── public/
     └── images/
         ├── hero-section.jpg
-        ├── about-doctor.jpg
+        ├── dr-brian-jang.jpg
+        ├── dr-jeongyeo-park.jpg
         └── location-map.jpg
 ```
 
