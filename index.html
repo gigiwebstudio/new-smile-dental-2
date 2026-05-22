@@ -214,18 +214,22 @@
             /* top bar */
             .top-bar { padding: 9px 16px; }
             .top-bar-left { display: none; }
-            .top-bar-inner { justify-content: space-between; }
-            .top-bar-right { justify-content: space-between; width: 100%; }
+            .top-bar-inner { justify-content: flex-end; }
+            .top-bar-right { gap: 16px; }
             /* nav */
             nav { padding: 14px 16px; top: 36px; }
             .nav-links, .nav-cta { display: none; }
             .hamburger { display: flex; }
             /* hero */
             .hero { flex-direction: column; }
-            .hero-image-side { min-height: 280px; max-height: 320px; }
-            .hero-content-side { padding: 48px 24px; }
+            .hero-image-side { min-height: 280px; max-height: 320px; flex: none; width: 100%; }
+            .hero-content-side { flex: none; width: 100%; padding: 48px 24px; }
             /* sections */
-            .about,.services,.reviews,.doctors,.cdcp{ padding: 64px 20px; }
+            .about,.services,.reviews,.doctors,.cdcp { padding: 64px 20px; }
+            .about-grid,.services-grid,.reviews-slider,.doctors-grid { grid-template-columns: 1fr; }
+            .services-grid { border: none; }
+            .service-card { border-right: none; border-bottom: 1px solid rgba(0,0,0,.08); }
+            /* location */
             .location { padding: 64px 20px; }
             .location-inner { grid-template-columns: 1fr; gap: 36px; }
             .location-map { min-height: 260px; }
